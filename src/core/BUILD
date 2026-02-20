@@ -2945,6 +2945,9 @@ grpc_cc_library(
         "absl/status:statusor",
         "absl/strings",
     ],
+    visibility = [
+        "//bazel:posix_engine",
+    ],
     deps = [
         "ares_resolver",
         "event_engine_common",
@@ -10838,6 +10841,7 @@ grpc_cc_library(
         "absl/log",
         "absl/functional:any_invocable",
     ],
+    visibility = ["//bazel:wait_for_single_owner"],
     deps = [
         "no_destruct",
         "time",
